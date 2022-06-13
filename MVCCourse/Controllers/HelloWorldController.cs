@@ -7,7 +7,7 @@ namespace MVCCourse.Controllers
     {
         public IActionResult Index()
         {
-            DogViewModel doggo = new DogViewModel() 
+            DogViewModel doggo = new DogViewModel() //ViewModel
             { Name="Sif",Age = 12};
 
             return View(doggo);
