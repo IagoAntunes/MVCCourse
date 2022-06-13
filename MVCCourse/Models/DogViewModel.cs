@@ -2,7 +2,7 @@
 {
     public class DogViewModel
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        public string Name { get; set; }//Nome
+        public int Age { get; set; }//Idade
     }
 }
