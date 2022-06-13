@@ -12,6 +12,10 @@ namespace MVCCourse.Controllers
 
             return View(doggo);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
 
         public String Hello()
         {
