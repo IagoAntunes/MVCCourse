@@ -4,9 +4,9 @@ namespace MVCCourse.Controllers
 {
     public class HelloWorldController : Controller
     {
-        public String Index()
+        public IActionResult Index()
         {
-            return "This is the Index Page";
+            return View();
         }
 
         public String Hello()
