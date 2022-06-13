@@ -15,7 +15,7 @@ namespace MVCCourse.Controllers
 
         public String Hello()
         {
-            return "Who's there";//NewView
+            return "Who's there";//NewViewt
         }
     }
 }
