@@ -1,4 +1,7 @@
-﻿<h1>Create</h1>
+﻿
+@model DogViewModel
+
+<h1>Create</h1>
 <hr />
 
 
@@ -10,17 +13,17 @@
 				<h5>Create a new Dog</h5>
 			</div>
 			<div class="card-body">
-				<form>
+				<form asp-controller="HelloWorld" asp-action="CreateDog" method="post">
 					<div class="mb-3">
 						<laberl class="form-label">Dog Name</laberl>
-						<input type="text" class="form-control"/>
+						<input asp-for="Name" type="text" class="form-control"/>
 					</div>
 					<div class="mb-3">
 						<laberl class="form-label">Dog Age</laberl>
-						<input type="number" class="form-control"/>
+						<input asp-for="Age" type="number" class="form-control"/>
 					</div>
 					<div class="mb-3"> 
-						<button class="btn btn-primary">Save</button>
+						<button class="btn btn-primary" type="submit">Save</button>
 					</div>
 				</form>
 			</div>

@@ -5,16 +5,22 @@ namespace MVCCourse.Controllers
 {
     public class HelloWorldController : Controller
     {
+        private static List<DogViewModel> dogs = new List<DogViewModel>();
         public IActionResult Index()
         {
-            DogViewModel doggo = new DogViewModel() //ViewModel
-            { Name="Sif",Age = 12};
-
-            return View(doggo);
+            return View(dogs);
         }
         public IActionResult Create()
         {
-            return View();
+            var dogVm = new DogViewModel();
+            return View(dogVm);
+        }
+
+        public IActionResult CreateDog(DogViewModel dogViewModel)
+        {
+            dogs.Add(dogViewModel);
+            return RedirectToAction(nameof(Index));
+            //return View("Index");
         }
 
         public String Hello()
