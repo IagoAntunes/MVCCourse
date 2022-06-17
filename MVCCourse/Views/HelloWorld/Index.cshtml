@@ -6,10 +6,16 @@
 <h1>Hello World</h1>
 <p>This is the index Page of Hello World Controller</p>
 
-<ul>
+<form method="post" asp-controller="HelloWorld" asp-action="DeleteDog" style="display:inline-block; width: 800px;
+    list-style: none;
+    padding: 0;">
 	@foreach(var dog in Model){
-		<li>
-			@dog.Name (@dog.Age)
-		</li>
+		<div class="form-group row" style="border: 1px solid black;width:120px;border-radius:20px">
+			<h3 style="color:black;text-align:center">@dog.Name</h3>
+			<h4 style="color:black;text-align:center">@dog.Age</h4>
+			<div class="col-sm-10">
+				<button asp-controller="HelloWorld" asp-route-Name="@dog.Name" asp-action="DeleteDog"  class="btn btn-danger" type="submit" style="border-radius:5px;align-items:center" >DELETAR</button>
+			</div>
+		</div>
 	}
-</ul>
+</form>

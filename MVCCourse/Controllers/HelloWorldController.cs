@@ -22,6 +22,11 @@ namespace MVCCourse.Controllers
             return RedirectToAction(nameof(Index));
             //return View("Index");
         }
+        public IActionResult DeleteDog(String Name)
+        {
+            dogs.RemoveAll(a => a.Name.Equals(Name));
+            return RedirectToAction(nameof(Index));
+        }
 
         public String Hello()
         {
